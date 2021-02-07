@@ -1,0 +1,48 @@
+﻿@using MVCCase.Models
+@model List<Product>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            NAME
+        </th>
+        <th>
+            BARCODE
+        </th>
+        <th>
+            PRICE
+        </th>
+        <th>
+            IMAGE
+        </th>
+        <th>
+            EXPLANATION
+        </th>
+        <th>
+            PIECE
+        </th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.barCode</td>
+                <td>@item.Price</td>
+                <td>@item.Image</td>
+                <td>@item.explanation</td>
+                <td>@item.Piece</td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+
+</table>
+
+
+
