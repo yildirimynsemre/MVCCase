@@ -1,9 +1,11 @@
 ﻿@using MVCCase.Models
 @model List<Product>
 
-
 <table class="table table-bordered">
     <tr>
+        <th>
+            ID
+        </th>
         <th>
             NAME
         </th>
@@ -26,24 +28,20 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.ProductId</td>
-            <td>@item.ProductName</td>
-            <td>@item.barCode</td>
-            <td>@item.Price</td>
-            <td>@item.Image</td>
-            <td>@item.explanation</td>
-            <td>@item.Piece</td>
-            <td><a href="/Home/Update/@item.ProductId" class="btn btn-success">Update</a></td>
-            @*<input type="button" value="Go Somewhere Else" onclick="location.href='<%: Url.Action("Delete", "Home" ) %>'" />*@
-            <td><a href="/Home/Delete/@item.ProductId" class="btn btn-danger">Delete</a></td>
-        </tr>
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>@item.barCode</td>
+                <td>@item.Price</td>
+                <td>@item.Image</td>
+                <td>@item.explanation</td>
+                <td>@item.Piece</td>
+                <td><a href="/Home/Update/@item.ProductId" class="btn btn-success">Update</a></td>
+                @*<input type="button" value="Go Somewhere Else" onclick="location.href='<%: Url.Action("Delete", "Home" ) %>'" />*@
+                <td><a href="/Home/Delete/@item.ProductId" class="btn btn-danger">Delete</a></td>
+            </tr>
         }
-
     </tbody>
-
-
-
 </table>
 
 

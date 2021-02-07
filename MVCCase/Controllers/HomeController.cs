@@ -42,7 +42,7 @@ namespace MVCCase.Controllers
         public ActionResult Update(int id)
         {
             var product = db.Products.Find(id);
-            return View("Update" , product);
+            return View("Update", product);
         }
 
         [HttpGet]
